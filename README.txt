@@ -5,7 +5,7 @@ Air - 100% Fully Responsive HTML5 Bootstrap Template
 AUTHOR:
 DESIGNED & DEVELOPED by FreeHTML5.co
 
-WORDPRESS:
+DEVELOPED in WORDPRESS:
 Por Diego Orellano - Figital
 
 CREDITS:
