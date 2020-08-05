@@ -18,29 +18,11 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-
-    <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="css/icomoon.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="css/flexslider.css">
-
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="css/style.css">
-
+        
     <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+    <!-- <script src="<?php echo RUTATEMA; ?>/js/modernizr-2.6.2.min.js"></script> -->
+    
+    <?php wp_head(); ?>
 </head>
 
 <body>
