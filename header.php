@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Air &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
 
-    <!-- Facebook and Twitter integration -->
+    <!-- Facebook y Twitter integracion -->
     <meta property="og:title" content="" />
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
@@ -18,10 +17,16 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-        
-    <!-- Modernizr JS -->
-    <!-- <script src="<?php echo RUTATEMA; ?>/js/modernizr-2.6.2.min.js"></script> -->
-    
+
+    <!-- Pingback -->
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+    <!-- Comentarios de respuesta en hilos -->
+    <?php if(is_single() && comments_open()){ 
+        wp_enqueue_script('comment-reply');
+         }
+    ?>
+
     <?php wp_head(); ?>
 </head>
 
@@ -30,6 +35,7 @@
     <div class="fh5co-loader"></div>
 
     <div id="page">
+        <!-- Navegacion y Logotipo -->
         <nav class="fh5co-nav" role="navigation">
             <div class="top-menu">
                 <div class="container">
@@ -37,8 +43,15 @@
                         <div class="col-xs-2">
                             <div id="fh5co-logo"><a href="index.html">Air<span>.</span></a></div>
                         </div>
-                        <div class="col-xs-10 text-right menu-1">
-                            <ul>
+                        <!-- <div class="col-xs-10 text-right menu-1"> -->
+
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'main-menu',
+                            'container_class' => 'col-xs-10 text-right menu-1',
+                            'walker' => new Air_Walker_Nav_Menu
+                            
+                        )); ?>
+                            <!-- <ul>
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="portfolio.html">Portfolio</a></li>
                                 <li class="has-dropdown">
@@ -53,8 +66,8 @@
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li class="btn-cta"><a href="#"><span>Login</span></a></li>
-                            </ul>
-                        </div>
+                            </ul> -->
+                        <!-- </div> -->
                     </div>
 
                 </div>
