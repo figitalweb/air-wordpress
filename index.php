@@ -16,7 +16,7 @@
 
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2><?php the_title(' ', true, 'right'); ?></h2>
+					<h2><?php wp_title(''); ?></h2>
 				</div>
 			</div>
 

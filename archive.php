@@ -26,7 +26,7 @@
                         <?php
                         $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
                         ?>
-                        <?php echo  $curauth->name; ?>
+                        <?php echo $curauth->display_name; ?>
                     </h2>
 
                 <?php elseif (is_404()) : ?>
