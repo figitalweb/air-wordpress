@@ -24,12 +24,13 @@ function register_custom_nav_walker()
 {
     require_once 'air-class-walker-nav-menu.php';
 }
+
 add_action('after_setup_theme', 'register_custom_nav_walker');
 
 /*************** Agregando Sidebars  *********/
 require_once('includes/air_sidebars.php');
 
-// Cambiar cantidad de palabras de extracto
+/*************** Cambiar cantidad de palabras de extracto  *********/
 function air_custom_the_excerpt($length)
 {
     $length = 18;
