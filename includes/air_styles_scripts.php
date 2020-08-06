@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'air_theme_style');
 function air_theme_script(){
 
     //Registrando scripts
-    wp_register_script('modernizr', RUTATEMA . '/js/modernizr-2.6.2.min.js', '', '2.6.2', false);
+    wp_register_script('modernizr', RUTATEMA . '/js/modernizr-2.6.2.min.js', array('jquery'), '2.6.2', false);
     
     wp_register_script('easing', RUTATEMA . '/js/jquery.easing.1.3.js', array('jquery'), '1.3', true);
     wp_register_script('bootstrap', RUTATEMA . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true);

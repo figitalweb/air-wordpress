@@ -1,8 +1,10 @@
 <footer id="fh5co-footer" role="contentinfo">
     <div class="container">
         
+        <!-- Area de Sidebar y widgets -->
         <?php get_sidebar(); ?>
 
+        <!-- Area de Copyright y Social media -->
         <div class="row copyright">
             <div class="col-md-12 text-center">
                 <p>

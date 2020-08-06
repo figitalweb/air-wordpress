@@ -41,9 +41,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-2">
-                            <div id="fh5co-logo"><a href="index.html">Air<span>.</span></a></div>
+                            <div id="fh5co-logo"><a href="<?php home_url(); ?>">Air<span>.</span></a></div>
                         </div>
-                        <!-- <div class="col-xs-10 text-right menu-1"> -->
 
                         <?php wp_nav_menu(array(
                             'theme_location' => 'main-menu',
@@ -67,7 +66,6 @@
                                 <li><a href="contact.html">Contact</a></li>
                                 <li class="btn-cta"><a href="#"><span>Login</span></a></li>
                             </ul> -->
-                        <!-- </div> -->
                     </div>
 
                 </div>

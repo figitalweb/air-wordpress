@@ -263,5 +263,12 @@
 		fullHeight();
 	});
 
+	//Seleccionamos los links de los sidebars y cambiamos la clase
+	$(document).ready(function () {
+		
+		$('.fh5co-widget ul').addClass('fh5co-footer-links');
+
+	})
+
 
 }());

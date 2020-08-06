@@ -10,3 +10,12 @@
  Text Domain: air */
 
 @import 'css/style.css';
+
+.fh5co-blog {
+    margin-bottom: 100px;
+}
+
+.fh5co-blog .blog-text {
+    margin-bottom: 0;
+
+}
