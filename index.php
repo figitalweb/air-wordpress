@@ -6,7 +6,8 @@
 		<?php
 
 		$args = array(
-			'post_type' => 'post'
+			'post_type' => 'post',
+			'paged' => get_query_var('paged') //Para activar paginacion en esta pagina
 		);
 
 		$query = new WP_Query($args);
@@ -15,10 +16,10 @@
 
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Our Blog</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+					<h2><?php the_title(' ', true, 'right'); ?></h2>
 				</div>
 			</div>
+
 			<div class="row">
 
 				<?php while ($query->have_posts()) : $query->the_post(); ?>
@@ -48,13 +49,25 @@
 						</div>
 					</div>
 
-			<?php endwhile;
+				<?php endwhile; ?>
 
-			else : 
-				//Contenido no encontrado
-				get_template_part('template-parts/content', 'nopost');
+				<!-- Navegacion -->
+					<div>
+						<div class="col-md-5 nav-previous alignleft">
+							<?php previous_posts_link('Anterior'); ?>
+						</div>
 
-			endif; ?>
+						<div class="col-md-5 nav-next alignright"><?php next_posts_link('Siguiente', $query->max_num_pages); ?>
+						</div>
+					</div>
+				
+
+			<?php
+		else :
+			//Contenido no encontrado
+			get_template_part('template-parts/content', 'nopost');
+
+		endif; ?>
 
 			</div>
 	</div>
