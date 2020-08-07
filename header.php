@@ -30,6 +30,19 @@
     <?php wp_head(); ?>
 </head>
 
+<?php
+
+//Obtenemos los datos de los settings creados para el personalizador
+$options_logo = get_theme_mod('air_setting');
+
+if (!empty($options_logo['img_logo'])) {
+    $logo = "<img src='" . $options_logo['img_logo'] . "' />";
+}else {
+    $logo = 'Logo';
+}
+
+?>
+
 <body <?php body_class(); ?>>
 
     <div class="fh5co-loader"></div>
@@ -41,7 +54,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-2">
-                            <div id="fh5co-logo"><a href="<?php home_url(); ?>">Air<span>.</span></a></div>
+                            <div id="fh5co-logo">
+                                <a href="<?php home_url(); ?>">
+                                    <?php echo $logo; ?>
+                                </a>
+                            </div>
                         </div>
 
                         <?php wp_nav_menu(array(

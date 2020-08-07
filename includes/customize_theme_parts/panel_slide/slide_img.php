@@ -10,22 +10,6 @@ $wp_customize->add_section('air_slide_img', array(
     'panel' => 'air_slide_panel'
 ));
 
-/************************ Background Dentro de Seccion Slide ******************************/
-
-//Setings Para Background De La Seccion Slide
-$wp_customize->add_setting('air_setting[img_slide_bg]', array(
-    'default' => '#2A528A',
-    'transport'   => 'refresh',
-    'type' => 'theme_mod'
-));
-
-//Control Para Background De La Seccion Slide
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'img_slide_bg', array(
-    'label' => __('Selecciona Un Color De Fondo Para La Sección', 'air'),
-    'section' => 'air_slide_img',
-    'settings' => 'air_setting[img_slide_bg]'
-)));
-
 
 /************************ Seleccionar Imagen 1, titutlo y descripcion ******************************/
 

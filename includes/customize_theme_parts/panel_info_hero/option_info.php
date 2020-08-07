@@ -27,21 +27,6 @@ $wp_customize->add_control('show_section_info', array(
     'type' => 'checkbox'
 ));
 
-/*************************  Background de la Sección  *******************************/
-
-//Setings Para Background De La Seccion 
-$wp_customize->add_setting('air_setting[info_bg]', array(
-    'default' => '#dd356e',
-    'transport'   => 'refresh',
-    'type' => 'theme_mod'
-));
-
-//Control Para Background De La Seccion 
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'info_bg', array(
-    'label' => __('Selecciona Un Color De Fondo Para La Sección', 'air'),
-    'section' => 'air_info_option',
-    'settings' => 'air_setting[info_bg]'
-)));
 
 /**********************  Titulo y descripción *******************************/
 
