@@ -6,6 +6,19 @@
  function air_customize_theme($wp_customize) {
 
     /**************************************************************************************
+     *                              Panel de Logotipo 
+     *************************************************************************************/
+     $wp_customize->add_panel('air_logo_panel', array(
+         'title' => __('Logo', 'air'),
+         'description' => __('Coloca tu logo', 'air'),
+         'priority' => 20
+     ));
+
+    // Sección Logotipo
+     include_once('customize_theme_parts/panel_logo/logo_header.php');
+
+
+    /**************************************************************************************
      *                              Panel de Slide 
      *************************************************************************************/
      $wp_customize->add_panel('air_slide_panel', array(
