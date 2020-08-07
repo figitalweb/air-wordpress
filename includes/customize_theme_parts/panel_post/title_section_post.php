@@ -11,7 +11,7 @@ $wp_customize->add_section('air_post_title', array(
     'panel' => 'air_post_panel'
 ));
 
-/********************** Sección Mostrar Titulo y descripción *******************************/
+/********************** Mostrar Titulo y descripción *******************************/
 
 //Setings Para Mostrar Titulo y descripcion de Seccion
 $wp_customize->add_setting('air_setting[show_title_section_post]', array(
@@ -27,7 +27,7 @@ $wp_customize->add_control('show_title_section_post', array(
     'type' => 'checkbox'
 ));
 
-/********************** Sección Titulo y descripción *******************************/
+/********************** Titulo y descripción *******************************/
 
 //Setings Para titulo Seccion
 $wp_customize->add_setting('air_setting[title_section_post]', array(

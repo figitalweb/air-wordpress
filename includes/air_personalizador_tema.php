@@ -36,6 +36,19 @@
     // Sección Mostrar Posts
     include_once('customize_theme_parts/panel_post/show_posts.php');
 
+
+    /**************************************************************************************
+     *                              Panel de Información Hero 
+     *************************************************************************************/
+    $wp_customize->add_panel('air_info_hero_panel', array(
+        'title' => __('Sección Información', 'air'),
+        'description' => __('Personaliza la seccion info hero', 'air'),
+        'priority' => 42
+    ));
+
+    // Sección Titulo, descripción, botones y color Dentro de Info Hero
+    include_once('customize_theme_parts/panel_info_hero/option_info.php');
+
  }
 
  add_action('customize_register', 'air_customize_theme');

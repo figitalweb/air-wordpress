@@ -10,11 +10,12 @@ $wp_customize->add_section('air_slide_img', array(
     'panel' => 'air_slide_panel'
 ));
 
-/************************ Sección Background Dentro de Seccion Slide ******************************/
+/************************ Background Dentro de Seccion Slide ******************************/
 
 //Setings Para Background De La Seccion Slide
 $wp_customize->add_setting('air_setting[img_slide_bg]', array(
     'default' => '#2A528A',
+    'transport'   => 'refresh',
     'type' => 'theme_mod'
 ));
 
@@ -26,7 +27,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'img_sl
 )));
 
 
-/************************ Sección Seleccionar Imagen 1, titutlo y descripcion ******************************/
+/************************ Seleccionar Imagen 1, titutlo y descripcion ******************************/
 
 //Setings Para Imagen 1 Slide
 $wp_customize->add_setting('air_setting[img_slide_one]', array(
@@ -69,7 +70,7 @@ $wp_customize->add_control('img_slide_one_description', array(
 ));
 
 
-/************************ Sección Seleccionar Imagen 2, titutlo y descripcion ******************************/
+/************************ Seleccionar Imagen 2, titutlo y descripcion ******************************/
 
 //Setings Para Imagen 2 Slide
 $wp_customize->add_setting('air_setting[img_slide_two]', array(
@@ -112,7 +113,7 @@ $wp_customize->add_control('img_slide_two_description', array(
 ));
 
 
-/************************ Sección Seleccionar Imagen 3, titutlo y descripcion ******************************/
+/************************ Seleccionar Imagen 3, titutlo y descripcion ******************************/
 
 //Setings Para Imagen 3 Slide
 $wp_customize->add_setting('air_setting[img_slide_tree]', array(
