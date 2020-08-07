@@ -22,15 +22,15 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
     <!-- Comentarios de respuesta en hilos -->
-    <?php if(is_single() && comments_open()){ 
+    <?php if (is_single() && comments_open()) {
         wp_enqueue_script('comment-reply');
-         }
+    }
     ?>
 
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
     <div class="fh5co-loader"></div>
 
@@ -48,9 +48,9 @@
                             'theme_location' => 'main-menu',
                             'container_class' => 'col-xs-10 text-right menu-1',
                             'walker' => new Air_Walker_Nav_Menu
-                            
+
                         )); ?>
-                            <!-- <ul>
+                        <!-- <ul>
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="portfolio.html">Portfolio</a></li>
                                 <li class="has-dropdown">

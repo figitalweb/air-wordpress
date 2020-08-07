@@ -40,3 +40,6 @@ add_filter('excerpt_length', 'air_custom_the_excerpt');
 
 /*************** Agregando Campos nuevos a inicio  *********/
 require_once('includes/campos_inicio.php');
+
+/*************** Agregando Personalizador  *********/
+require_once('includes/air_personalizador_tema.php');
