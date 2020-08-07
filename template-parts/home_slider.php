@@ -112,10 +112,14 @@ if (!empty($options_slide['img_slide_tree_description'])) {
                                     <div class="row">
                                         <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                             <div class="slider-text-inner">
-                                                <div class="desc">
-                                                    <h2><?php echo $title_img_1_slide; ?></h2>
-                                                    <p><?php echo $description_img_1_slide; ?></p>
-                                                </div>
+
+                                                <?php if ($description_img_1_slide != '' || $title_img_1_slide != '') : ?>
+                                                    <div class="desc">
+                                                        <h2><?php echo $title_img_1_slide; ?></h2>
+                                                        <p><?php echo $description_img_1_slide; ?></p>
+                                                    </div>
+                                                <?php endif; ?>
+
                                             </div>
                                         </div>
                                     </div>
@@ -135,10 +139,14 @@ if (!empty($options_slide['img_slide_tree_description'])) {
                                         <div class="row">
                                             <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                                 <div class="slider-text-inner">
-                                                    <div class="desc">
-                                                        <h2><?php echo $title_img_2_slide; ?></h2>
-                                                        <p><?php echo $description_img_2_slide; ?></p>
-                                                    </div>
+
+                                                    <?php if ($description_img_2_slide != '' || $title_img_2_slide != '') : ?>
+                                                        <div class="desc">
+                                                            <h2><?php echo $title_img_2_slide; ?></h2>
+                                                            <p><?php echo $description_img_2_slide; ?></p>
+                                                        </div>
+                                                    <?php endif; ?>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -157,10 +165,14 @@ if (!empty($options_slide['img_slide_tree_description'])) {
                                             <div class="row">
                                                 <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                                     <div class="slider-text-inner">
-                                                        <div class="desc">
-                                                            <h2><?php echo $title_img_3_slide; ?></h2>
-                                                            <p><?php echo $description_img_3_slide; ?></p>
-                                                        </div>
+
+                                                        <?php if ($description_img_3_slide != '' || $title_img_3_slide != '') : ?>
+                                                            <div class="desc">
+                                                                <h2><?php echo $title_img_3_slide; ?></h2>
+                                                                <p><?php echo $description_img_3_slide; ?></p>
+                                                            </div>
+                                                        <?php endif; ?>
+
                                                     </div>
                                                 </div>
                                             </div>
