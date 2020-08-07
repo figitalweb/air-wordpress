@@ -49,6 +49,22 @@
     // Sección Titulo, descripción, botones y color Dentro de Info Hero
     include_once('customize_theme_parts/panel_info_hero/option_info.php');
 
+
+    /**************************************************************************************
+     *                              Panel de Pie de Página 
+     *************************************************************************************/
+    $wp_customize->add_panel('air_footer_panel', array(
+        'title' => __('Sección Pie de Página', 'air'),
+        'description' => __('Personaliza la seccion Del Pie de Página hero', 'air'),
+        'priority' => 60
+    ));
+
+    // Sección Titulo, descripción, botones y color Dentro de Info Hero
+    include_once('customize_theme_parts/panel_footer/info_footer.php');
+
+    // Sección Social Media
+    include_once('customize_theme_parts/panel_footer/socialmedia_footer.php');
+
  }
 
  add_action('customize_register', 'air_customize_theme');
