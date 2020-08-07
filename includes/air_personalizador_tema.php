@@ -14,11 +14,27 @@
          'priority' => 35
      ));
 
-    /************* Sección Titulo y descripción Dentro de Slide **********************/
+    // Sección Titulo y descripción Dentro de Slide
      include_once('customize_theme_parts/panel_slide/title_section.php');
 
-    /************* Sección imagénes y textos Dentro de Slide **********************/
+    // Sección imagénes y textos Dentro de Slide 
      include_once('customize_theme_parts/panel_slide/slide_img.php');
+
+
+    /**************************************************************************************
+     *                              Panel de Posts 
+     *************************************************************************************/
+    $wp_customize->add_panel('air_post_panel', array(
+        'title' => __('Posts De Home', 'air'),
+        'description' => __('Personaliza los posts a mostrar', 'air'),
+        'priority' => 40
+    ));
+
+    // Sección Titulo y descripción Dentro de Posts
+    include_once('customize_theme_parts/panel_post/title_section_post.php');
+
+    // Sección Mostrar Posts
+    include_once('customize_theme_parts/panel_post/show_posts.php');
 
  }
 
